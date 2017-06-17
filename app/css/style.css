@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 540px;
+}
+@font-face {
+  font-family: "Ubuntu", "OpenSans", sans-serif;
+  src: url('font/Ubuntu-B.woff') format("ttf"), url('font/Ubuntu-L.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.clf:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.wrapper {
+  background: #fff;
+  position: relative;
+  z-index: 200;
+  -webkit-box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.6);
+          box-shadow: 0px 0px 10px rgba(68, 68, 68, 0.6);
+}
+.wrapper .container {
+  max-width: 945px;
+  margin: 0 auto;
+}
+.wrapper .container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.hero {
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hero .container {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+}
+.header {
+  top: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.header__logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.header__phone {
+  float: left;
+  color: #fff;
+  opacity: 0.6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.header__call {
+  float: right;
+  color: #fff;
+  opacity: 0.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #fff;
+}
+.section {
+  position: relative;
+  padding: 130px 0;
+}
+.section .container {
+  width: 100%;
+  height: 100%;
+}
+.section .container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.section__title {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.5em;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 48px;
+  font-weight: 100;
+  color: #000;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.section__title .icon {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 13px;
+  fill: #00a7eb;
+  margin-bottom: -11px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  text-align: center;
+}
+.section__title .icon:after,
+.section__title .icon:before {
+  content: "";
+  width: calc(40%);
+  position: absolute;
+  height: 2px;
+  background: #1cabec;
+}
+.section__title .icon:before {
+  left: 0;
+}
+.section__title .icon:after {
+  right: 0;
+}
+.best-text {
+  font-size: 48px;
+  width: 33%;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.best-text span {
+  color: #00aaef;
+}
+.best-text strong {
+  font-weight: 600;
+}
+.best-textual {
+  width: 66%;
+  float: right;
+  line-height: 1.5;
+}
+.best-textual ol {
+  list-style: decimal;
+  position: relative;
+  left: -42px;
+}
+.gallery {
+  background: #eee;
+}
+.nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.footer {
+  background-image: url('../../img/footer.png');
+  height: 540px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.footer__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}

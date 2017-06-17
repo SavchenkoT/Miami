@@ -1,0 +1,37 @@
+.apart {
+  margin-bottom: 30px;
+
+  &__photos {
+    display: flex;
+		margin-bottom: 12px;
+
+    &__photo {
+      height: 260px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      flex: 1;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+
+
+  &__mod-right,
+  &__photo {
+    &:first-child {
+      flex: 2;
+    }
+  }
+
+	&__mod-left,
+  &__photo {
+    &:last-child {
+      flex: 2;
+    }
+  }
+
+}

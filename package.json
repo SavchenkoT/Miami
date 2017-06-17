@@ -1,0 +1,32 @@
+{
+  "name": "Miami",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "buffer-shims": "^1.0.0",
+    "fs.realpath": "^1.0.0",
+    "has-flag": "^2.0.0",
+    "json-stable-stringify": "^1.0.1",
+    "lru-cache": "^4.1.0",
+    "path-dirname": "^1.0.2",
+    "process-nextick-args": "^1.0.7",
+    "sigmund": "^1.0.1",
+    "util-deprecate": "^1.0.2"
+  }
+}
