@@ -8,6 +8,11 @@
       .clf;
     }
 
+    &:nth-child(odd) {
+      background: #eee;
+    }
+
+
     &__title {
       display: block;
       position: absolute;
@@ -48,6 +53,24 @@
       }
     }
 
+    &__left{
+      float: left;
+      width: 50%;
+      +r(720) {
+        float: none;
+        width: auto;
+        margin-bottom: 30px;
+      }
+    }
+
+	&__right {
+      float: right;
+      width: 33%;
+      +r(720) {
+        float: none;
+        width: auto;
+      }
+  }
 }
 
 .best-text {
