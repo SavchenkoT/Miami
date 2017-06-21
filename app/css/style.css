@@ -208,6 +208,30 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.testis {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.testi {
+  text-align: center;
+  padding: 0 2px;
+}
+.testi__photo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+}
 .apart {
   margin-bottom: 30px;
 }
