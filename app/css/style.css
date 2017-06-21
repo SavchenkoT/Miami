@@ -63,9 +63,14 @@ body {
 .header__logo {
   position: absolute;
   left: 50%;
+  top: -46px;
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+.header__logo .icon {
+  font-size: 80px;
+  fill: #fff;
 }
 .header__phone {
   float: left;
@@ -144,18 +149,13 @@ body {
   float: left;
   width: 50%;
 }
-.section__left + r(720) {
-  float: none;
-  width: auto;
-  margin-bottom: 30px;
-}
 .section__right {
   float: right;
   width: 33%;
 }
-.section__right + r(720) {
-  float: none;
-  width: auto;
+.section__bottom {
+  text-align: center;
+  margin-top: 30px;
 }
 .best-text {
   font-size: 48px;
@@ -222,7 +222,7 @@ body {
   display: flex;
   margin-bottom: 12px;
 }
-.apart__photos__photo {
+.apart__photo {
   height: 260px;
   background-size: cover;
   background-position: 50% 50%;
@@ -232,32 +232,16 @@ body {
       -ms-flex: 1;
           flex: 1;
 }
-.apart__photos__photo:first-child {
+.apart__photo:first-child {
   margin-right: 20px;
 }
-.apart__photos__mod-right:first-child,
-.apart__photos__photo:first-child {
+.apart__mod-right .apart__photo:first-child {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
-.apart__photos__mod-left:last-child,
-.apart__photos__photo:last-child {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-.apart__mod-right:first-child,
-.apart__photo:first-child {
-  -webkit-box-flex: 2;
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-.apart__mod-left:last-child,
-.apart__photo:last-child {
+.apart__mod-left .apart__photo:last-child {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
       -ms-flex: 2;
@@ -278,13 +262,13 @@ body {
   width: 100%;
   font-size: 14px;
   line-height: 52px;
-  height: 52px;
   display: block;
   background: #1cabec;
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  border: 0;
 }
 .button_inline {
   display: inline-block;
@@ -294,8 +278,8 @@ body {
 .form__field {
   margin-bottom: 10px;
 }
-.form .input,
-.form .textarea {
+.input,
+.textarea {
   text-align: center;
   line-height: normal;
   height: 52px;
@@ -305,13 +289,14 @@ body {
   text-transform: uppercase;
   width: 100%;
   border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.form .input:placeholder,
-.form .textarea:placeholder {
+.input:placeholder,
+.textarea:placeholder {
   font-size: 14px;
 }
-.form .input .textarea,
-.form .textarea .textarea {
+.textarea {
   height: 100px;
   padding: 20px;
   border: none;
@@ -324,6 +309,10 @@ body {
 .textual_big {
   font-size: 24px;
   line-height: 1.3;
+}
+.textual_big a {
+  color: #000;
+  text-decoration: none;
 }
 .textual h2 {
   font-size: 32px;

@@ -12,7 +12,6 @@
       background: #eee;
     }
 
-
     &__title {
       display: block;
       position: absolute;
@@ -45,10 +44,10 @@
           background: #1cabec;
         }
         &:before {
-          left: 0
+          left: 0;
         }
         &:after{
-          right: 0
+          right: 0;
         }
       }
     }
@@ -56,21 +55,17 @@
     &__left{
       float: left;
       width: 50%;
-      +r(720) {
-        float: none;
-        width: auto;
-        margin-bottom: 30px;
-      }
     }
 
-	&__right {
-      float: right;
-      width: 33%;
-      +r(720) {
-        float: none;
-        width: auto;
-      }
-  }
+  	&__right {
+        float: right;
+        width: 33%;
+    }
+
+    &__bottom {
+      text-align: center;
+      margin-top: 30px;
+    }
 }
 
 .best-text {
