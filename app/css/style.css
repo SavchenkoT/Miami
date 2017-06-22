@@ -33,6 +33,9 @@ body {
   display: table;
   clear: both;
 }
+.container + r(980) {
+  margin: 0 20px;
+}
 .hero {
   background-size: cover;
   background-position: 50% 100%;
