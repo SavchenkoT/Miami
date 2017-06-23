@@ -40,3 +40,8 @@ gulp.task('less', function () {
 });
 
 gulp.task('default', ['serve']);
+
+gulp.task('deploy', function () {
+    return gulp.src('/**/*', {cwd: buildPath})
+        .pipe(gh_pages())
+});
