@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 build/
+=======
+node_modules/
+build/
+app/css
+.publish
+>>>>>>> e5a8c65a4d51062cf6ccc45f223c7b4e4b204c25

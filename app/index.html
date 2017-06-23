@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Miami</title>
+      <!-- build:css css/style-min.css -->
     <link rel="stylesheet" href="css/style.css">
+      <!-- endbuild -->
 </head>
 <body>
 <div class="wrapper">
@@ -74,8 +76,8 @@
 
           <div class="apart">
             <div class="apart__photos">
-              <div class="apart__photo" style="background-image: url('img/apart.png')"></div>
-              <div class="apart__photo" style="background-image: url('img/apart.png')"></div>
+              <div class="apart__photo" style="background-image: url(img/apart.png)"></div>
+              <div class="apart__photo" style="background-image: url(img/apart.png)"></div>
             </div>
 
             <h2>Marina Palms / <span>North Miami Beach, FL 33162</span></h2>
@@ -83,14 +85,18 @@
 
           <div class="apart apart__mod-left">
             <div class="apart__photos">
-              <div class="apart__photo" style="background-image: url('img/apart.png')"></div>
-              <div class="apart__photo" style="background-image: url('img/apart.png')"></div>
+              <div class="apart__photo" style="background-image: url(img/apart.png)"></div>
+              <div class="apart__photo" style="background-image: url(img/apart.png)"></div>
             </div>
 
             <h2>Marina Palms / <span>North Miami Beach, FL 33162</span></h2>
           </div>
 
-          <a href="" class="button button_inline">View all</a>
+          <div class="section__bottom">
+              <a href="#" class="button button_inline">View all</a>
+          </div>
+
+
 
       </div>
   </div>
@@ -110,16 +116,16 @@
 
       <div class="section__right">
         <div class="form">
-          <div class="form_field">
+          <div class="form__field">
             <input type="text" placeholder="Name" class="input"/>
           </div>
-          <div class="form_field">
+          <div class="form__field">
             <input type="text" placeholder="phone" class="input"/>
           </div>
-          <div class="form_field">
+          <div class="form__field">
             <input type="text" placeholder="email" class="input"/>
           </div>
-          <div class="form_submit">
+          <div class="form__submit">
             <button class="button">consultation</button>
           </div>
         </div>
@@ -133,6 +139,39 @@
         Testimonials
         <span class="icon"><img src="img/icon.svg"></img></span>
       </div>
+
+      <div class="testis">
+        <div class="testi">
+            <div class="testi__photo" style="background-image: url(img/apart.png);"></div>
+            <h3 class="testi__name">Stev Joni</h3>
+            <div class="testi__position">Founder Lucoil</div>
+            <div class="testi__descr">
+                <p>Nice work, Certificates National <br />
+                  Association of Realtors (USA).</p>
+            </div>
+        </div>
+
+        <div class="testi">
+            <div class="testi__photo" style="background-image: url(img/apart.png);"></div>
+            <h3 class="testi__name">Stev Joni</h3>
+            <div class="testi__position">Founder Lucoil</div>
+            <div class="testi__descr">
+                <p>Nice work, Certificates National <br />
+                  Association of Realtors (USA).</p>
+            </div>
+        </div>
+
+        <div class="testi">
+            <div class="testi__photo" style="background-image: url(img/apart.png);"></div>
+            <h3 class="testi__name">Stev Joni</h3>
+            <div class="testi__position">Founder Lucoil</div>
+            <div class="testi__descr">
+                <p>Nice work, Certificates National <br />
+                  Association of Realtors (USA).</p>
+            </div>
+        </div>
+      </div>
+
 
 
     </div>
@@ -174,7 +213,7 @@
 
 </div>
 
-<div class="footer">
+<div class="footer" style="background-image: url(img/footer.png)">
   <div class="container">
     <div class="footer__logo"><img src="img/logo.png"></img></div>
     <div class="footer__copy">© 2013 Miami.</div>
