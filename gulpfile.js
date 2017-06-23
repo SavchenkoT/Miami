@@ -37,7 +37,14 @@ var srcPath = 'app/';
 
 gulp.task("check", function () {
     console.log(isProduction);
-})
+});
+
+gulp.task('deploy', function () {
+    return gulp.src('**/*', {cwd:buildPath})
+        .pipe(gh_pages())
+});
+
+
 gulp.task('less', function () {
     return gulp.src("less/style.less", {cwd: srcPath})
         .pipe(plumber())
@@ -121,20 +128,13 @@ gulp.task('serve', function () {
     }
 });
 
-
+gulp.task('default', ['build'])
 gulp.task('build', function (fn) {
     console.log(isProduction)
     if (isProduction) {
-        run('clean', 'symbols', 'images', 'fonts', 'less', 'js', 'html', 'serve', fn)
+        run('clean', 'symbols', 'images', 'fonts', 'less', 'js', 'html', 'serve','deploy', fn)
     }
     else {
         run('symbols', 'js', 'less', 'serve', fn);
     }
-});
-
-gulp.task('default', ['build'])
-
-gulp.task('deploy', function () {
-    return gulp.src('/**/*', {cwd: "build"})
-        .pipe(gh_pages())
 });
