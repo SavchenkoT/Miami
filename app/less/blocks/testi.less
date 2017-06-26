@@ -1,17 +1,25 @@
 .testis {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .testi {
   text-align: center;
   padding: 0 2px;
+  transition: 0.5s ease-out;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: scale(1.3);
+    border: 1px dashed;
+    padding: 10px 0;
+  }
 
   &__photo {
     height: 150px;
     width: 150px;
     .circle();
-    // border-radius: 50%;
     .cover();
     background-position: 50% 50%;
     background-repeat: no-repeat;

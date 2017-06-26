@@ -1,8 +1,5 @@
-/**
- * Created by ALI on 6/20/2017.
- */
-'use strict';
 
+'use strict';
 var gulp = require('gulp');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
@@ -30,21 +27,13 @@ var combine = require('stream-combiner2');
 var babel = require('gulp-babel');
 var filter = require('gulp-filter');
 var cheerio = require('gulp-cheerio');
-
 var isProduction = !!argv.production;
 var buildPath = isProduction ? 'build' : 'app';
 var srcPath = 'app/';
 
 gulp.task("check", function () {
     console.log(isProduction);
-});
-
-gulp.task('deploy', function () {
-    return gulp.src('**/*', {cwd:buildPath})
-        .pipe(gh_pages())
-});
-
-
+})
 gulp.task('less', function () {
     return gulp.src("less/style.less", {cwd: srcPath})
         .pipe(plumber())
@@ -52,13 +41,6 @@ gulp.task('less', function () {
         .pipe(gulp.dest("app/css"))
 });
 
-<<<<<<< HEAD
-gulp.task('default', ['serve']);
-
-gulp.task('deploy', function () {
-    return gulp.src('/**/*', {cwd: buildPath})
-        .pipe(gh_pages())
-=======
 
 gulp.task('js', function () {
     return gulp.src('js/dev/*.js', {cwd: srcPath})
@@ -94,9 +76,9 @@ gulp.task('symbols', function () {
         .pipe(gulp.dest(buildPath + '/img'));
 });
 
-gulp.task('fonts', function () {
-    return gulp.src('**/*', {cwd: path.join(srcPath + 'fonts')})
-        .pipe(gulp.dest(buildPath + '/fonts'))
+gulp.task('font', function () {
+    return gulp.src('**/*', {cwd: path.join(srcPath + 'font')})
+        .pipe(gulp.dest(buildPath + '/font'))
 
 });
 
@@ -127,7 +109,7 @@ gulp.task('serve', function () {
         gulp.watch("**/*.less", {cwd: path.join(srcPath, 'less')}, ['less', browserSync.reload]);
         gulp.watch('app/**/*.html', ['html', browserSync.reload]);
         gulp.watch('**/*.js', {cwd: path.join(srcPath + 'js')}, ['js'], browserSync.reload);
-        gulp.watch('**/*.*', {cwd: path.join(srcPath, 'fonts')}, ['fonts', browserSync.reload]);
+        gulp.watch('**/*.*', {cwd: path.join(srcPath, 'font')}, ['font', browserSync.reload]);
         gulp.watch(['**/*.*', '!icons-svg/!**'], {cwd: path.join(srcPath, 'img')}, [browserSync.reload]);
         gulp.watch('**/*.svg', {cwd: path.join(srcPath, 'img/icons-svg')}, ['symbols', browserSync.reload]);
 
@@ -135,14 +117,20 @@ gulp.task('serve', function () {
     }
 });
 
-gulp.task('default', ['build'])
+
 gulp.task('build', function (fn) {
     console.log(isProduction)
     if (isProduction) {
-        run('clean', 'symbols', 'images', 'fonts', 'less', 'js', 'html', 'serve','deploy', fn)
+        run('clean', 'symbols', 'images', 'font', 'less', 'js', 'html', 'serve', fn)
     }
     else {
         run('symbols', 'js', 'less', 'serve', fn);
     }
->>>>>>> e5a8c65a4d51062cf6ccc45f223c7b4e4b204c25
+});
+
+gulp.task('default', ['build'])
+
+gulp.task('deploy', function () {
+    return gulp.src('**/*', {cwd: 'build'})
+        .pipe(gh_pages())
 });

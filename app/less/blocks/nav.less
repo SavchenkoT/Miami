@@ -8,10 +8,36 @@
   justify-content: space-between;
   list-style: none;
 
-  a {
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-  }
+  &__item {
+    display: inline-block;
+    a {
+      position:relative;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      transition:color 0.3s ease-in;
+      &:hover {
+        color: #00aaef;
+        outline: none;
+      }
 
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        color: transparent;
+        content: '•';
+        text-shadow: 0 0 transparent;
+        font-size: 1.2em;
+        transition: text-shadow 0.3s, color 0.3s;
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
+      &:hover:after{
+        color: #00aaef;
+	      text-shadow: 10px 0 #00aaef, -10px 0 #00aaef;
+      }
+    }
+
+  }
 }
