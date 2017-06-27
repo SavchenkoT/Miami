@@ -16,6 +16,7 @@
       text-decoration: none;
       color: #fff;
       transition:color 0.3s ease-in;
+      animation: pulsate 1.2s linear infinite;
       &:hover {
         color: #00aaef;
         outline: none;
@@ -36,6 +37,10 @@
       &:hover:after{
         color: #00aaef;
 	      text-shadow: 10px 0 #00aaef, -10px 0 #00aaef;
+      }
+
+      @-webkit-keyframes pulsate {
+       50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
       }
     }
 

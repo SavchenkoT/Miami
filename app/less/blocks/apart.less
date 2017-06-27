@@ -38,6 +38,7 @@
 
 .input {
   width: 100%;
+  border-radius: 4px;
   text-align: center;
   line-height: normal;
   height: 52px;
@@ -49,8 +50,10 @@
 }
 .button {
   width: 100%;
+  border-radius: 4px;
   font-size: 14px;
-  line-height: 52px;
+  line-height: 42px;
+  // animation: blink 2s linear infinite;
   // height: 52px;
   display: block;
   background: #1cabec;
@@ -59,12 +62,22 @@
   color: #fff;
   cursor: pointer;
   border: 0;
+  animation: pulsate 1.2s linear infinite;
 
   &_inline {
     display: inline-block;
     padding: 0 60px;
     width: auto;
   }
+
+  &:hover {
+    background: #0ab6fc;
+    outline: inherit;
+  }
+
+}
+@-webkit-keyframes pulsate {
+ 50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
 }
 
 .form {
@@ -76,7 +89,7 @@
 .textarea {
   text-align: center;
 	line-height: normal;
-	height: 52px;
+	height: 42px;
 	background: #eee;
 	font-weight: 600;
 	color: #393939;
@@ -84,13 +97,14 @@
 	width: 100%;
   border: none;
   box-sizing: border-box;
+
 	&:placeholder {
     font-size: 14px;
   }
 }
 .textarea {
   height: 100px;
-	padding: 20px;
+	padding: 40px;
 	border: none;
   }
 
