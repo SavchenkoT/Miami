@@ -46,3 +46,35 @@
 
   }
 }
+
+.menu {
+  display: block;
+
+  &__adaptiv {
+    color: red !important;
+  }
+}
+
+#top-menu {
+  position: relative;
+  right: 0;
+  top: 20px;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+  &::before {
+    top: -5px;
+  }
+  &::after {
+    top: 5px;
+  }
+}
